@@ -54,9 +54,8 @@ from flask import Flask, render_template, request
 #             return render_template("result.html",prediction=prediction)
 
 #     return app
-
+    
 app=Flask(__name__)
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -172,3 +171,5 @@ def SalaryPrediction():
         prediction='Income less that 50K'
     return prediction
     
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
